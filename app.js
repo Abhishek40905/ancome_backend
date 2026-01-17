@@ -3,6 +3,7 @@ import router from "./index.js";
 import cookieParser from "cookie-parser";
 import cors from "cors"
 const app = e();
+app.set("trust proxy", 1);
 app.use(cookieParser())
 app.use(e.json())
 app.use(
