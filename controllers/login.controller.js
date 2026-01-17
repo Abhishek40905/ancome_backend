@@ -89,7 +89,7 @@ const login_controller = asyncHandler(async (req, res) => {
     res.cookie("access_token", jwt_token, {
         httpOnly: true,
         secure: isProduction, // True in production (HTTPS)
-        sameSite: isProduction ? "none" : "lax", // 'none' needed for cross-site cookies in prod
+        sameSite: 'none', // 'none' needed for cross-site cookies in prod
         maxAge: 1000 * 60 * 60 * 24 * 30 // 30 days
     });
 
@@ -146,7 +146,7 @@ const logout_controller = asyncHandler(async (req, res) => {
     res.clearCookie("access_token", {
         httpOnly: true,
         secure: isProduction,
-        sameSite: isProduction ? "none" : "lax"
+        sameSite: "none"
     });
 
     return res.status(200).json({
