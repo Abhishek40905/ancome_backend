@@ -9,5 +9,5 @@ router.post('/create-project',verifyJWT,create_project_controller)
 router.post('/get-all-projects',verifyJWT,get_all_projects_controller)
 router.delete("/delete-project/:projectId",verifyJWT, delete_project_controller);
 router.put("/update-project",verifyJWT, update_project_controller);
-
+// router.post('/add-user',verifyJWT,)
 export default router

@@ -7,6 +7,7 @@ const getAllUsersDisplayNames = asyncHandler(async (req, res) => {
     {
       _id: 1, 
       displayName: 1, 
+      githubId:1,
       username: 1,
       isEventManager: 1, 
       globalRole: 1
